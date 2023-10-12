@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HOME</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+	
+	    *{
+	    	padding: 0px;
+	    	margin: 0px;
+
+	    }
+      
+     .head{
+     	background: white;
+     	color:RGB(225,66,0);
+     	padding: 10px 70px;
+     	font-family: sans-serif;
+     	font-size: 30px;
+     	border-top:10px solid rgb(250, 0, 141) ;	
+     }
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color:	rgb(255, 0, 102);
+   text-align: center;
+   left:32%;
+}
+
+.navbar a {
+   left:32%;
+    float: left;
+  font-size: 22px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+  
+}
+
+.dropdown .dropbtn {
+  font-size: 22px;  
+  border: none;
+  outline: none;
+  color:black;
+  padding: 14px 50px;
+  background-color: inherit;
+  font-family: inherit;
+  
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:rgb(255, 0, 102);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover  {
+  background-color:aqua;
+  opacity: 0.5;
+}
+
+
+.navbar a:hover  {
+  background-color: white;
+   opacity: 0.5;
+  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
+h2{
+font-family: 'Open Sans', sans-serif;
+font-size:18px;
+padding-top:15px;
+padding-left:30%;
+}
+.footer{
+width:100%;
+height:8%;
+background-color:rgb(255, 0, 102);
+color:black;
+position:absolute;
+bottom:0;
+}
+
+
+div.gallery {
+  margin: 5px;
+  border: 6px solid black;
+  float: left;
+  width: 409px;
+border: 3px solid red;  
+}
+
+div.gallery img {
+  width: 100%;
+  height: 5%;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+ }
+ input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+ input[type=number] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 4px;
+}
+	
+input[type=submit] {padding: 10px 20px 11px !important;
+font-size: 21px !important;
+background-color: #F36C8C;
+font-weight: bold;
+text-shadow: 1px 1px #F36C8C;
+color: #ffffff;
+border-radius: 100px;
+-moz-border-radius: 100px;
+-webkit-border-radius: 100px;
+border: 1px solid #F36C8C;
+cursor: pointer;
+box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+
+}
+
+	</style>
+
+    </head>
+  
+      
+
+<body>
+	<div class="head">
+		<h1>CAKE WORLD - ANNIVERSARY CAKE</h1>
+	</div>
+<div class="navbar">
+  <a href="homeCss.html">HOME</a>
+  <a href="aboutCake.html">ABOUT US</a>
+  <div class="dropdown">
+    <button class="dropbtn">OUR MENUS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="delicious.html">DELICIOUS CAKE</a>
+      <a href="anniversaryCss.html">ANNIVERSARY CAKE</a>
+      <a href="birthdayCss.html">BIRTHDAY CAKE</a>
+       <a href="cartoon.html">CARTOON CAKE</a>
+    </div>
+      <a href="homeCss.html"></a>
+      
+  </div>
+   <a href="contact.html">CONTACT US</a>
+    <a href="loginCss.html">LOGIN</a>
+</div>
+     
+<div class="text-block">
+
+
+<div class="gallery">
+    <img src="Classic-LOVE-Cake.jpg">
+  <div class="desc"> CLASSIC LOVE CAKE<br>
+ <form name="calcForm" action="ordernow" onsubmit="return validate()"  method="POST">
+      
+    
+   COST IS :     <input type="number" value="2500" id="c" name="cost" readonly><br>
+         <input type="text" name="quantity" id="q" placeholder="Please enter quantity"><br>
+         <input type="text" name="kg" id="k" placeholder="Please enter kgs">
+
+ 
+<P>
+<input type="submit" name="b" onsubmit="return validate()" value="PLACE ORDER" style="width:250px;height:70px;margin-RIGHT:5px;" >
+</form> </p></div>
+</div>
+
+
+<div class="gallery">
+    <img src="TimelessAffinity.jpg">
+  <div class="desc">ENDLESS LOVE CAKE<br>
+   <form name="calcForm" action="ordernow" onsubmit="return validate1()"  method="POST">
+
+      
+   COST IS :     <input type="number" value="3500" id="c1" name="cost" readonly><br>
+         <input type="text" name="quantity" id="q1" placeholder="Please enter quantity"><br>
+         <input type="text" name="kg" id="k1" placeholder="Please enter kgs">
+
+   
+<P>
+<input type="submit" name="b" onsubmit="return validate1()" value="PLACE ORDER" style="width:250px;height:70px;margin-RIGHT:5px;" >
+  </form></p>
+  </div>
+</div>
+
+
+<div class="gallery">
+    <img src="ToMyLove.jpg">
+  <div class="desc">TO MY LOVE CAKE<br>
+ <form name="calcForm" action="ordernow" onsubmit="return validate2()"  method="POST">
+
+  
+   COST IS :     <input type="number" value="3200" id="c2" name="cost" readonly><br>
+         <input type="text" name="quantity" id="q2" placeholder="Please enter quantity"><br>
+         <input type="text" name="kg" id="k2" placeholder="Please enter kgs">
+
+   
+<P>
+<input type="submit" name="b" onsubmit="return validate2()" value="PLACE ORDER" style="width:250px;height:70px;margin-RIGHT:5px;" >
+  </form> </p>
+  </div>
+</div>
+
+
+<div class="gallery">
+    <img src="40thAnniversary.jpg">
+  <div class="desc">40 th ANNIVERSARY CAKE<br>
+  <form name="calcForm" action="ordernow" onsubmit="return validate3()"  method="POST">
+
+   
+   COST IS :     <input type="number" value="3500" id="c3" name="cost" readonly><br>
+         <input type="text" name="quantity" id="q3" placeholder="Please enter quantity"><br>
+         <input type="text" name="kg" id="k3" placeholder="Please enter kgs">
+
+
+<P>
+<input type="submit" name="b" onsubmit="return validate3()" value="PLACE ORDER" style="width:250px;height:70px;margin-RIGHT:5px;" >
+ </form></p></div>
+</div>
+
+
+<div class="gallery">
+    <img src="hopeless-romantic.jpg">
+  <div class="desc">ROMANTIC CAKE<br>
+ <form name="calcForm" action="ordernow" onsubmit="return validate4()"  method="POST">
+
+   COST IS :     <input type="number" value="5000" id="c4" name="cost" readonly><br>
+         <input type="text" name="quantity" id="q4" placeholder="Please enter quantity"><br>
+         <input type="text" name="kg" id="k4" placeholder="Please enter kgs">
+
+
+<P>
+<input type="submit" name="b" onsubmit="return validate4()" value="PLACE ORDER" style="width:250px;height:70px;margin-RIGHT:5px;" >
+  </form></p></div>
+</div>
+
+
+<div class="gallery">
+    <img src="living-the-dream-anniversary-cake.jpg">
+  <div class="desc">DREAM ANNIVERSARY CAKE<br>
+ <form name="calcForm" action="ordernow" onsubmit="return validate5()"  method="POST">
+  
+   COST IS :     <input type="number" value="4500" id="c5" name="cost" readonly><br>
+         <input type="text" name="quantity" id="q5" placeholder="Please enter quantity"><br>
+         <input type="text" name="kg" id="k5" placeholder="Please enter kgs">
+
+<P>
+<input type="submit" name="b" onsubmit="return validate5()" value="PLACE ORDER" style="width:250px;height:70px;margin-RIGHT:5px;" >
+  </form></p></div>
+</div>
+
+
+</div>
+</form>
+ <script>  
+   
+    function validate(){
+  
+   var q=document.getElementById('q').value;
+   var qRGEX =/^[1-9]{1}$/;
+  var qResult = qRGEX.test(q);
+
+                
+   var k=document.getElementById('k').value;
+   var kRGEX =/^[1-9]{1}$/;
+  var kResult = kRGEX.test(k);
+
+if(qResult == false )
+{
+alert('QUANTITY MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+}
+    if(kResult == false )
+{
+alert(' Kgs MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+    }
+    alert("CALCULATING YOUR BILL");
+    return true;
+}
+ 
+ function validate1(){
+  
+   var q1=document.getElementById('q1').value;
+   var qRGEX =/^[1-9]{1}$/;
+  var qResult = qRGEX.test(q1);
+
+                
+   var k1=document.getElementById('k1').value;
+   var kRGEX =/^[1-9]{1}$/;
+  var kResult = kRGEX.test(k1);
+
+if(qResult == false )
+{
+alert('QUANTITY MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+}
+    if(kResult == false )
+{
+alert(' Kgs MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+    }
+      alert("CALCULATING YOUR BILL");
+    return true;
+}
+ 
+ 
+ function validate2(){
+  
+   var q2=document.getElementById('q2').value;
+   var qRGEX =/^[1-9]{1}$/;
+  var qResult = qRGEX.test(q2);
+
+                
+   var k2=document.getElementById('k2').value;
+   var kRGEX =/^[1-9]{1}$/;
+  var kResult = kRGEX.test(k2);
+
+if(qResult == false )
+{
+alert('QUANTITY MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+}
+    if(kResult == false )
+{
+alert(' Kgs MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+    }
+      alert("CALCULATING YOUR BILL");
+    return true;
+}
+     
+ function validate3(){
+  
+   var q3=document.getElementById('q3').value;
+   var qRGEX =/^[1-9]{1}$/;
+  var qResult = qRGEX.test(q3);
+
+                
+   var k3=document.getElementById('k3').value;
+   var kRGEX =/^[1-9]{1}$/;
+  var kResult = kRGEX.test(k3);
+
+if(qResult == false )
+{
+alert('QUANTITY MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+}
+    if(kResult == false )
+{
+alert(' Kgs MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+    }
+      alert("CALCULATING YOUR BILL");
+    return true;
+}
+ 
+ function validate4(){
+  
+   var q4=document.getElementById('q4').value;
+   var qRGEX =/^[1-9]{1}$/;
+  var qResult = qRGEX.test(q4);
+
+                
+   var k4=document.getElementById('k4').value;
+   var kRGEX =/^[1-9]{1}$/;
+  var kResult = kRGEX.test(k4);
+
+if(qResult == false )
+{
+alert('QUANTITY MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+}
+    if(kResult == false )
+{
+alert(' Kgs MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+    }
+      alert("CALCULATING YOUR BILL");
+    return true;
+}
+
+ function validate5(){
+  
+   var q5=document.getElementById('q5').value;
+   var qRGEX =/^[1-9]{1}$/;
+  var qResult = qRGEX.test(q5);
+
+                
+   var k5=document.getElementById('k5').value;
+   var kRGEX =/^[1-9]{1}$/;
+  var kResult = kRGEX.test(k5);
+
+if(qResult == false )
+{
+alert('QUANTITY MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+}
+    if(kResult == false )
+{
+alert(' Kgs MUST BE 1 DIGIT IN LENGTH..!!');
+return false;
+    }
+      alert("CALCULATING YOUR BILL");
+    return true;
+}
+ 
+ 
+	</script>		  
+    
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<html>
+    <head>
+        <title>HOME</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+	
+	    *{
+	    	padding: 0px;
+	    	margin: 0px;
+
+	    }
+      
+     .head{
+     	background: white;
+     	color:RGB(225,66,0);
+     	padding: 10px 70px;
+     	font-family: sans-serif;
+     	font-size: 30px;
+     	border-top:10px solid rgb(250, 0, 141) ;	
+     }
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+hr.new5 {
+  border: 10px solid rgb(250, 0, 141);
+  border-radius: 5px;
+}
+
+#bg{
+    clip-path: circle(79% at 21% 3%);
+    background: #f0f0f0;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    z-index: -1;    
+    
+}
+
+
+.page-container{
+    height: 100vh;
+    display: flex;
+    top:5%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container{
+    margin-top: 1%;
+    height: 80%;
+    width:49.44%;
+    box-shadow: 0px 0px 73px #050505;
+    
+}
+
+.form-header{
+
+    width: 100%;
+    background: #C61951;
+    display: block;
+    padding-top: 12px;
+    
+    
+    
+}
+
+.login-txt{
+    font-size: 33pt;
+    background: #1b083d;
+    padding: 12px;
+    margin-left: -37px;
+    width: 70%;
+    
+    text-align: center;
+   
+         font-family: Montserrat;
+    color:#f8f7aa;
+}
+
+.dark-side{
+    width: 37px;
+    height: 37px;
+    /* margin-top: -41px; */
+    margin-left: -37px;
+    background-color: #170731;
+   
+}
+
+
+.form-body{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.form-body > input{
+    margin: 10px;
+}
+
+input[type="text"],input[type="password"]{
+    padding: 9px;
+    border: none;
+    /* border-radius: 4px; */
+    border:none;
+    background: transparent;
+   box-shadow: 0 0 2px #1b083d;
+ font-family: inherit;
+   border-radius:14px;
+}
+
+input[type="text"]:focus,input[type="password"]:focus{
+    outline: #673AB7;
+    box-shadow: 1px 0px 2px #c61951
+ 
+
+}
+
+
+input[type="submit"]{
+  background: #1b083d;
+ 
+  
+  font-size: 20pt;
+  padding: 12px;
+
+   font-family: Montserrat;
+    color:#f8f7aa;
+}
+
+
+
+.forg-pwd{
+    color:#1b083d;
+    align-self: center;
+    padding: 11px;
+    font-size:9pt;
+    cursor: pointer;
+}
+
+
+
+
+
+
+@media (max-width:768px){
+    .login-container{
+      
+        width:80%;
+        
+    }
+    .login-txt{
+        font-size: 24pt;
+    }
+
+
+	</style>
+
+    </head>
+  
+      
+
+<body>
+	<div class="head">
+		<h1>CAKE WORLD - DELIVERY DETAILS</h1>
+	</div>
+<hr class="new5">
+
+    
+    
+        <div id="bg">
+        
+    </div>
+    <div class="page-container">
+        <div class="login-container">
+            <div class="form-header">
+                
+                <div class="login-txt">
+                Enter Your Delivery Details...!
+                </div>
+                <div class="dark-side">
+
+                </div>  
+            </div>
+
+           
+         <form action="deliverServlet" method="POST" onsubmit="return validate()">
+                    <div class="form-body">
+                         <input type="text" name="name" id="name" placeholder="Your Name..??? " required >
+                         <input type="text" name="mobile" id="mobile" placeholder="Your Mobile Number..??? " required>
+                            <input type="text" name="code" id="code" placeholder="Your Postal Code..??? " required>
+                          
+                          <textarea placeholder="Your Address....??" tabindex="5" name="address" required></textarea>
+                
+                     <input type="submit" name="send" onsubmit="return validate()" value="PROCEED" >
+  </div>
+
+         </div>
+    </div>
+   </form>
+  
+ <script> 
+
+ 
+ function validate(){
+     
+     var Name=document.getElementById('name').value;
+   var NameRGEX =/^[A-Z]{1}[a-z]{5}$/;
+  var NameResult = NameRGEX.test(Name);
+
+  var phoneNumber = document.getElementById('mobile').value;
+  var phoneRGEX =/^\(?([0-9]{3})\)?[ ]?([0-9]{3})[ ]?([0-9]{4})$/;
+  var phoneResult = phoneRGEX.test(phoneNumber);
+  
+  var postalCode = document.getElementById('code').value;      
+var postalRGEX = /^[A-Z]{3}[0-9]{4}$/i;  
+  var postalResult = postalRGEX.test(postalCode);
+  
+ 
+ 
+if(NameResult == false)
+{
+alert('NAME SHOULD START WITH UPPERCASE AND MUST BE FOLLOWED BY 5 CHARACTERS IN LENGTH..!!');
+return false;
+}
+if(phoneResult == false)
+{
+   alert('Oooops...!!! PLEASE ENTER THE MOBILE NUMBER LIKE ( 111 222 3333 ) ...!!!');
+return false;
+}
+ 
+if(postalResult == false)
+{
+alert('POSTAL NUMBER MUST START WITH 3 ALPHABETS FOLLOWED BY 4 NUMBERS...!!');
+return false;
+}
+alert("YOUR DELIVERY DETAILS HAS BEEN NOTED....!!")
+  return true;
+}
+
+</script> 
+</body>
+</html>
